@@ -6,7 +6,7 @@ const useStyles = makeStyles({
   header: {
     fontFamily: "Dancing Script",
     color: "#2D88E2",
-    margin: "32px",
+    margin: "32px auto",
     textAlign: "center",
   },
   desc: {
@@ -15,19 +15,26 @@ const useStyles = makeStyles({
     fontSize: "1.3rem",
     textAlign: "center",
     lineHeight: "1.3em",
+    marginBottom: "32px",
   },
 });
 
-const Inter_header = () => {
+const InternHeader = () => {
   const classes = useStyles();
   return (
     <div>
       <Grid container>
         <Grid container sm={2}></Grid>
-        <Grid container sm={8} direction="column" alignItems="center">
+        <Grid
+          container
+          sm={8}
+          display="flex"
+          direction="column"
+          alignItems="center"
+        >
           <Grid item>
             <Typography className={classes.header} variant="h2" gutterBottom>
-              Web Development Intership
+              Web Development Internship
             </Typography>
           </Grid>
           <Grid container>
@@ -50,4 +57,4 @@ const Inter_header = () => {
     </div>
   );
 };
-export default Inter_header;
+export default InternHeader;
